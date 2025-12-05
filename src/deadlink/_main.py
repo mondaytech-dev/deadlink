@@ -17,7 +17,7 @@ from rich.progress import track
 # https://regexr.com/3e6m0
 # make all groups non-capturing with ?:
 url_regex = re.compile(
-    r"http(?:s)?:\/\/.(?:www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b(?:[-a-zA-Z0-9@:%_\+.~#?&/=]*)"
+    r"http(?:s)?:\/\/(?:www\.)?[-A-Za-z0-9@:%._+~#=]{1,256}\.[A-Za-z]{2,63}\b[-A-Za-z0-9@:%_+.~#?&/=\(\)\[\];-]*"
 )
 
 Info = namedtuple("Info", ["status_code", "url"])
